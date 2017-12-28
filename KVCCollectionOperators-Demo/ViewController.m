@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Employee.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSMutableArray *mArray = [NSMutableArray array];
+    for (NSInteger i=0; i<5; i++) {
+        Employee *e1  =[[Employee alloc] init];
+        e1.salary = 100+i;
+        [mArray addObject:e1];
+    }
+    double total = 0;
+    for (Employee *e1 in mArray) {
+        total = e1.salary +total;
+    }
+    double avgSalary = total/mArray.count;
+    NSLog(@"%f-%f",avgSalary,total);
+   
+    NSLog(@"%@",[mArray valueForKeyPath:@"@avg.salary"]);
+    NSLog(@"%@",[mArray valueForKeyPath:@"@min.salary"]);
+    NSLog(@"%@",[mArray valueForKeyPath:@"@max.salary"]);
+    NSLog(@"%@",[mArray valueForKeyPath:@"@sum.salary"]);
+    NSLog(@"%@",[@[@(1),@(2)] valueForKeyPath:@"@max.self"]);
 }
 
 

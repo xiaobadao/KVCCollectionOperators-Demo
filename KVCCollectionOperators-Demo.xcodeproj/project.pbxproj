@@ -13,6 +13,7 @@
 		18A75F9B1FF4874500D80FCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A75F9A1FF4874500D80FCF /* Assets.xcassets */; };
 		18A75F9E1FF4874500D80FCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A75F9C1FF4874500D80FCF /* LaunchScreen.storyboard */; };
 		18A75FA11FF4874500D80FCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A75FA01FF4874500D80FCF /* main.m */; };
+		18A75FA91FF4876800D80FCF /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A75FA81FF4876800D80FCF /* Employee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		18A75F9D1FF4874500D80FCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A75F9F1FF4874500D80FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A75FA01FF4874500D80FCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18A75FA71FF4876800D80FCF /* Employee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		18A75FA81FF4876800D80FCF /* Employee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				18A75F921FF4874400D80FCF /* AppDelegate.m */,
 				18A75F941FF4874400D80FCF /* ViewController.h */,
 				18A75F951FF4874400D80FCF /* ViewController.m */,
+				18A75FA71FF4876800D80FCF /* Employee.h */,
+				18A75FA81FF4876800D80FCF /* Employee.m */,
 				18A75F971FF4874400D80FCF /* Main.storyboard */,
 				18A75F9A1FF4874500D80FCF /* Assets.xcassets */,
 				18A75F9C1FF4874500D80FCF /* LaunchScreen.storyboard */,
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A75F961FF4874400D80FCF /* ViewController.m in Sources */,
+				18A75FA91FF4876800D80FCF /* Employee.m in Sources */,
 				18A75FA11FF4874500D80FCF /* main.m in Sources */,
 				18A75F931FF4874400D80FCF /* AppDelegate.m in Sources */,
 			);
