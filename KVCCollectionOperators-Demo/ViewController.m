@@ -9,6 +9,15 @@
 #import "ViewController.h"
 #import "Employee.h"
 
+NS_INLINE void MVComputeTimeWithNameAndBlock(const char *caller, void (^block)(void)) {
+    CFTimeInterval startTimeInterval = CACurrentMediaTime();
+    block();
+    CFTimeInterval nowTimeInterval = CACurrentMediaTime();
+    NSLog(@"%s - Time Running is: %f", caller, nowTimeInterval - startTimeInterval);
+}
+
+#define MVComputeTime(...) MVComputeTimeWithNameAndBlock(__PRETTY_FUNCTION__, (__VA_ARGS__))
+
 @interface ViewController ()
 
 @end
@@ -36,6 +45,14 @@
     NSLog(@"%@",[mArray valueForKeyPath:@"@max.salary"]);
     NSLog(@"%@",[mArray valueForKeyPath:@"@sum.salary"]);
     NSLog(@"%@",[@[@(1),@(2)] valueForKeyPath:@"@max.self"]);
+
+    NSString * attributeName = @"firstName";
+    NSString * attributeValue = @"Adam";
+    NSPredicate * predicate1;
+    
+    predicate1 = [NSPredicate predicateWithFormat:@"%K like %@",
+     attributeName,attributeValue];
+    
 }
 
 

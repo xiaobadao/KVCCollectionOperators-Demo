@@ -11,5 +11,5 @@
 @interface Employee : NSObject
 
 @property(nonatomic,assign) NSInteger salary;
-
+@property(nonatomic,assign) NSString *name;
 @end
